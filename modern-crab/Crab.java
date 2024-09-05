@@ -15,5 +15,23 @@ public class Crab extends Actor
      */
     public void act()
     {
+        Lobster a = (Lobster)getOneIntersectingObject(Lobster.class);
+        if ((a != null)) {
+            getWorld().removeObject(a);
+        }
+        
+        
+        if (Greenfoot.isKeyDown("up")) {
+            move(10);
+        }
+        if (Greenfoot.isKeyDown("down")) {
+            move(-10);
+        }
+        if (Greenfoot.isKeyDown("left")) {
+            turn(-10);
+        }
+        if (Greenfoot.isKeyDown("right")) {
+            turn(10);
+        }
     }
 }

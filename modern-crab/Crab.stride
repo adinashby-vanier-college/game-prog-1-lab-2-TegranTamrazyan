@@ -13,7 +13,36 @@
             <javadoc xml:space="preserve">Act - do whatever the Crab wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.</javadoc>
             <params/>
             <throws/>
-            <body/>
+            <body>
+                <variable type="Lobster" type-java="Lobster" name="a" value="(Lobster)getOneIntersectingObject(Lobster.class)" value-java="(Lobster)getOneIntersectingObject(Lobster.class)" enable="true"/>
+                <if condition="(a!=null)" condition-java="(a != null)" enable="true">
+                    <ifStatements>
+                        <call expression="getWorld().removeObject(a)" expression-java="getWorld().removeObject(a)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <blank/>
+                <blank/>
+                <if condition="Greenfoot.isKeyDown(&quot;up&quot;)" condition-java="Greenfoot.isKeyDown(&quot;up&quot;)" enable="true">
+                    <ifStatements>
+                        <call expression="move(10)" expression-java="move(10)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="Greenfoot.isKeyDown(&quot;down&quot;)" condition-java="Greenfoot.isKeyDown(&quot;down&quot;)" enable="true">
+                    <ifStatements>
+                        <call expression="move(-10)" expression-java="move(-10)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="Greenfoot.isKeyDown(&quot;left&quot;)" condition-java="Greenfoot.isKeyDown(&quot;left&quot;)" enable="true">
+                    <ifStatements>
+                        <call expression="turn(-10)" expression-java="turn(-10)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="Greenfoot.isKeyDown(&quot;right&quot;)" condition-java="Greenfoot.isKeyDown(&quot;right&quot;)" enable="true">
+                    <ifStatements>
+                        <call expression="turn(10)" expression-java="turn(10)" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
         </method>
     </methods>
 </class>
